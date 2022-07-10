@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::post('url', [コントローラー, 'メソッド名'])->name('任意の名前')
+// nameを指定すると view 側で route 関数を使って指定することができる
+Route::post('/store', [HomeController::class, 'store'])->name('store');

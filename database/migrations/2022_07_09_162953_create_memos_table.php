@@ -16,7 +16,7 @@ class CreateMemosTable extends Migration
         Schema::create('memos', function (Blueprint $table) {
             // 符号なしキー、第2引数は Auto Incrementの設定
             $table->unsignedBigInteger("id", true);
-            $table->string(("content"));
+            $table->longText(("content"));
             $table->unsignedBigInteger("user_id");
             $table->softDeletes(); // 論理削除を定義
             // timestampのみだと値が入らないので、生SQLで直接書く

@@ -90,15 +90,16 @@
                 <div class="col-md-4 p-0">
                     <div class="card">
                         <div class="card-header">
-                            中央カラム
+                            メモ一覧
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            @foreach($memos as $memo)
+                                <a href="" class="d-block card-text">{{ $memo['content'] }}</a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    右カラム
+                <div class="col-md-6 p-0">
                     @yield('content')
                 </div>
             </div>
