@@ -25,3 +25,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // nameを指定すると view 側で route 関数を使って指定することができる
 Route::post('/store', [HomeController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('edit');
+Route::post('/update', [HomeController::class, 'update'])->name('update');
