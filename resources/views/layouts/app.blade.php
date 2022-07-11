@@ -94,7 +94,7 @@
                         </div>
                         <div class="card-body">
                             @foreach($memos as $memo)
-                                <a href="" class="d-block card-text">{{ $memo['content'] }}</a>
+                                <a href="/edit/{{ $memo['id'] }}" class="d-block card-text">{{ $memo['content'] }}</a>
                             @endforeach
                         </div>
                     </div>
